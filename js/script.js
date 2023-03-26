@@ -18,11 +18,11 @@ function showColor(el) {
      }
 };
 
-questions.forEach(el => {document.getElementById('cards').insertAdjacentHTML('beforeend',
+questions.forEach((el, i) => {document.getElementById('cards').insertAdjacentHTML('beforeend',
 `${showColor(el)}
 <div class="card-content">
 <p class="title is-4 has-text-centered" id="first">
-    ${el.question}
+    ${i + 1}. ${el.question}
 </p>
 </div>
 <footer class="card-footer">
