@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>JS Questions</title>
 </head>
 <body class="px-4 pt-6">
     <h1 class="title is-3 has-text-centered has-text-grey-dark mb-6">Interview questions about JS</h1>
-    <div class="is-flex is-flex-direction-column mx-6" id="cards"></div>
+    <section class="mx-6 is-flex">
+        <div class="control column is-one-fifth px-0 mb-5 mr-6 pt-0 is-flex is-flex-direction-column">
+            <textarea class="textarea is-medium is-primary" placeholder="Write your question" id="textarea"></textarea>
+            <button onclick="addQuestion()" type="button" class="is-align-self-flex-start button is-warning mt-auto">+ Add new question</button>
+        </div>
+        <div class="is-flex is-flex-direction-column">
+            <label class="checkbox mt-6">
+                <input id="known-questions" type="checkbox" onclick="showQuestions()">
+                <span class="has-text-success">Show questions you know</span>
+            </label>
+            <label class="checkbox mt-5">
+                <input id="not-known-questions" type="checkbox" onclick="showQuestions()">
+                <span class="has-text-danger">Show questions you don't know</span>
+            </label>
+        </div>
+    </section>
+    <div class="is-flex is-flex-wrap-wrap mx-6 columns is-3" id="cards"></div>
     <script src="js/questions.js"></script>
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/d2f5c41e22.js" crossorigin="anonymous"></script>
